@@ -1,13 +1,13 @@
 import readline from "readline";
 import { getProductById } from "./carpeta-api/productos";
-
-
-console.log('consola-api-ejercicio v0.0.1');
+import { getProduct } from "./carpeta-api/productos";
 
 const rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout,
 });
+
+console.log('consola-api-ejercicio v0.0.1');
 
 const buscarId =() => {
 	rl.question('ingerse el id de producto: ',() => {
@@ -24,3 +24,4 @@ const buscarId =() => {
 
 }
 buscarId()
+
