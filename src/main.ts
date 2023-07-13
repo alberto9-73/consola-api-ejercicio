@@ -10,15 +10,17 @@ const rl = readline.createInterface({
 console.log('consola-api-ejercicio v0.0.1');
 
 const buscarId =() => {
-	rl.question('ingerse el id de producto: ',() => {
-		
-	let id:any= rl
-
-		const products = getProductById(id)
-		
-		 console.log(products);
+	rl.question('ingerse el id de producto: ',(id) => {
 		
 
+
+		 getProductById(Number(id))
+		 .then(p=> console.log(p.title))
+		 .catch(e=> console.log('El Prducto no existe'));
+		 
+	
+		
+		
 });
 
 
